@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;500;600;700;800&display=swap"); 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,26 +9,60 @@
 body {
   font-size: 18px;
   font-family: Arial;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 768px;
-  padding: 30px;
-  padding: 30px;
+  padding: 0 30px;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 ul {
-    list-style-position: inside;
+  list-style-position: inside;
+}
+
+h1 {
+  font-size: 2.5em !important;
+}
+
+h2 {
+  font-size: 1.5em !important;
+}
+
+h3 {
+  font-size: 1.25em !important;
+}
+
+h4 {
+  font-size: 1em !important;
+}
+
+h5 {
+  font-size: 0.75em !important;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-image-container {
-    padding: 10px
+  padding: 10px;
 }
 
 .profile-image {
-    background-color: black;
-    height: 150px;
-    width: 150px;
-    border-radius: 100%;
-    border: none;
-    object-fit: cover;
+  background-color: black;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.container,
+.navbar,
+.footer {
+  max-width: 768px !important;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,8 +1,11 @@
-<nav id="navbar">
-    <ul class="nav-links">
-        <li><a href="/" {% if page.title == "Home" %}class="active-page"{% endif %}>Home</a></li>
-        <li><a href="/about" {% if page.title == "About" %}class="active-page"{% endif %}>About</a></li>
-        <li><a href="/blog" {% if page.title == "Blog" %}class="active-page"{% endif %}>Blog</a></li>
-        <li><a href="/contact" {% if page.title == "Contact" %}class="active-page"{% endif %}>Contact</a></li>
-    </ul>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="{{ site.baseurl }}/">Raymond Morland</a>
+      <ul class="navbar-nav flex-row gap-2">
+          <li class="nav-item"><a href="/blog" class=" nav-link">Blog</a></li>
+          <li class="nav-item"><a href="/software" class=" nav-link">Software</a></li>
+          <li class="nav-item"><a href="/papers" class=" nav-link">Papers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>

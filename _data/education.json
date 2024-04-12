@@ -1,0 +1,25 @@
+[
+  {
+    "school": "Athabasca University",
+    "degree": "Bachelor of Science",
+    "major": "Computing and Information Systems",
+    "description": "Member of the <a href='https://oscar.athabascau.ca/ies/index.html'>Intelligent Educational Systems Research Group</a>.",
+    "startMonth": "July",
+    "startYear": 2022,
+    "endMonth": "June",
+    "endYear": 2024,
+    "link": "https://www.athabascau.ca/science-and-technology/about/discover-our-academic-disciplines/school-of-computing-and-information-systems.html"
+  },
+  {
+    "school": "University of Saskatchewan",
+    "degree": "Bachelor of Science",
+    "major": "Physics",
+    "minor": "Mathematics",
+    "description": "",
+    "startMonth": "Sept",
+    "startYear": 2011,
+    "endMonth": "May",
+    "endYear": 2016,
+    "link": "https://artsandscience.usask.ca/physics/"
+  }
+]

@@ -2,20 +2,116 @@
 layout: default
 ---
 
-<div class="home-section">
-  <div>
-    <div class="profile-image-container">
-        <img src="../assets/images/profile-img.JPEG" alt="" class="profile-image">
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-3">
+      <div class="profile-image-container text-center">
+        <img
+          src="../assets/images/profile-img.JPEG"
+          alt=""
+          class="profile-image" />
+      </div>
+      <div class="text-center">
+        <h4>
+          <b>AI / Data / Cloud</b>
+        </h4>
+        <h4 class="">
+          CIS Student & Research Assistant at
+          <a
+            href="https://www.athabascau.ca/science-and-technology/about/discover-our-academic-disciplines/school-of-computing-and-information-systems.html"
+            target="_blank"
+            rel="noopener noreferrer">Athabasca University</a>
+        </h4>
+        <div class="d-flex flex-row justify-content-center gap-1">
+          <div class="p-2">
+            <a
+              href="https://github.com/RayMorland"
+              target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="p-2">
+            <a
+              href="https://www.linkedin.com/in/raymorland"
+              target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <div class="p-2"></div>
+        </div>
+      </div>
     </div>
-    <h3>AI</h3>
-    <h4 class="">CIS Student and Research Assistant at Athabasca University</h4>
+    <div class="col-md-9">
+      <h1>Raymond Morland</h1>
+      <p></p>
+    </div>
   </div>
-  <div style="display: flex; flex-direction: column; gap: 12px;">
-    <h1>Raymond Morland</h1>
-    Sit adipisicing nostrud in cupidatat labore ut occaecat ipsum consequat.
-    Amet Lorem fugiat et excepteur sunt anim sit voluptate excepteur deserunt
-    non. Incididunt culpa cillum irure consectetur.
-    <p></p>
+  <hr/>
+  <div class="row mb-2">
+    <h2 class="mb-3">&#x1F393; Education</h2>
+    {% for education in site.data.education %}
+      <div class="d-flex flex-row justify-content-between mb-2">
+        <div>
+          <a
+            href="{{ education.link }}"
+            target="_blank"
+            rel="noopener noreferrer">
+            <h3>{{ education.school }}</h3>
+          </a>
+          <h4>
+            {{ education.degree }} - {{ education.major }}
+          </h4>
+          <p>{{ education.description }}</p>
+        </div>
+
+        <h4>{{ education.startMonth }} {{ education.startYear }} - {{ education.endMonth }} {{ education.endYear }}</h4>
+      </div>
+    {% endfor %}
+  </div>
+  <hr/>
+  <div class="row mb-2">
+    <h2 class="mb-3">💼 Employment</h2>
+    {% for job in site.data.employment %}
+      <div class="d-flex flex-row justify-content-between mb-2">
+        <div>
+          <a
+            href="{{ job.link }}"
+            target="_blank"
+            rel="noopener noreferrer">
+            <h3>{{ job.employer }}</h3>
+
+          </a>
+          <h4>{{ job.department }}</h4>
+          <h4>
+            {{ job.title }}</h4>
+        </div>
+
+        <h4>{{ job.startMonth }} {{ job.startYear }} - {{ job.endMonth }} {{ job.endYear }}</h4>
+      </div>
+    {% endfor %}
+  </div>
+  <hr>
+  <div class="row mb-2">
+    <h2 class="mb-3">📋 Projects</h2>
+    {% for project in site.data.projects %}
+      <div class="d-flex flex-row justify-content-between mb-2">
+        <div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+        </div>
+
+        <h4>{{ project.startMonth }} {{ project.startYear }} - {{ project.endMonth }} {{ project.endYear }}</h4>
+      </div>
+    {% endfor %}
+  </div>
+  <hr/>
+  <div class="row mb-2">
+    <h2 class="mb-3">📄 Papers</h2>
+  </div>
+  <hr/>
+  <div class="row mb-2">
+    <h2 class="mb-3">✏️ Blog Posts</h2>
   </div>
 </div>
-<div></div>

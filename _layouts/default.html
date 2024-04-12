@@ -9,6 +9,12 @@
       type="text/css"
       href="/assets/styles/main.css">
 
+    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+    <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
     {% if page.katex %}
       <link
         rel="stylesheet"
@@ -34,7 +40,7 @@
   </head>
   <body>
     {% include navigation.html %}
-    <main class="page-content">
+    <main class="page-content mt-5">
       {{ content }}
     </main>
     {% include footer.html %}
