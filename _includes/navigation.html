@@ -1,11 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container">
-      <a class="navbar-brand" href="{{ site.baseurl }}/">Raymond Morland</a>
-      <ul class="navbar-nav flex-row gap-2">
-          <li class="nav-item"><a href="/blog" class=" nav-link">Blog</a></li>
-          <li class="nav-item"><a href="/software" class=" nav-link">Software</a></li>
-          <li class="nav-item"><a href="/papers" class=" nav-link">Papers</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-2">
+  <div class="container-fluid navbar-custom d-flex">
+    <a class="navbar-brand" href="/">Raymond Morland</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
