@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="container d-flex flex-column gap-2">
-  <div class="d-flex flex-row gap-4 mb-4">
-    <div class="col-md-3 d-flex flex-column text-center px-4 gap-2 text-wrap">
+  <div class="row g-4 mb-4">
+    <div class="col-md-3 col d-flex flex-column text-center px-4 gap-2 text-wrap">
       <div class="profile-image-container text-center">
         <img
           src="../assets/images/profile-img.JPEG"
@@ -24,7 +24,7 @@ layout: default
         </h4>
         <a href="mailto:raymondmorland@gmail.com" class="text-wrap">raymondmorland@gmail.com</a>
         <div class="d-flex flex-row justify-content-center gap-1">
-          <div class="p-2">
+          <div class="p-2  d-flex flex-column justify-content-center">
             <a
               href="https://github.com/RayMorland"
               target="_blank"
@@ -32,12 +32,21 @@ layout: default
               <i class="fab fa-github fa-2x"></i>
             </a>
           </div>
-          <div class="p-2">
+          <div class="p-2 d-flex flex-column justify-content-center">
             <a
               href="https://www.linkedin.com/in/raymorland"
               target="_blank"
               rel="noopener noreferrer">
               <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+          </div>
+          <div class="p-2  d-flex flex-column justify-content-center">
+            <a
+              href="https://www.linkedin.com/in/raymorland"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="fs-3 text-decoration-none mb-1 fw-bold">
+              CV
             </a>
           </div>
         {% comment %} <div class="p-2"></div> {% endcomment %}
@@ -46,19 +55,22 @@ layout: default
     </div>
     <div class="col-md-9 d-flex flex-column gap-4">
       <h1 class="text-center text-md-start fw-bolder">
-        <b>AI  &&  Data  &&  Cloud</b>
+        <b>AI  &&  Data  &&  Cloud && Automation</b>
       </h1>
-      <p class="fs-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae possimus, deleniti atque autem nam laudantium laborum aperiam minus a ratione officiis deserunt voluptas dolores molestiae eveniet perspiciatis. Veritatis, consequuntur corporis.</p>
+      <p class="fs-3">I am a master's student in Information Systems and reserach assistant in the
+        <a href="https://oscar.athabascau.ca/ies/index.html" target="_blank">Intelligent Educational Systems Research Group</a>
+        at Athabasca University. I am interested in artificial intelligence, machine learning, data science, cloud computing, distributed systems, and the intersection of AI and automation. My academic background, combined with hands-on experience in AI-driven projects, has allowed me to explore innovative solutions that leverage cutting-edge technology.<br><br>My mission is to contribute to the future of automation and intelligent systems. Contact me if our interests align, collaboration is key to the success of our autonomous future.
+      </p>
     </div>
   </div>
   <hr/>
   <div class="d-flex flex-column gap-4">
-    <div class="d-flex flex-row gap-2 mb-2">
+    <div class="row g-2 mb-2">
       <div class="col-md-3 px-4">
         <h2 class="mb-3 text-center fw-bolder">Research</h2>
       </div>
       <div class="col-md-9">
-        <p class="fs-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid quidem consectetur illum necessitatibus nobis magni illo officia nihil vero! Aperiam neque modi officiis quos nulla, voluptatem libero provident ut praesentium.</p>
+        <p class="fs-5">Currently, my research focuses on the application of AI in Educational technologies.</p>
       </div>
     </div>
     {% comment %} <hr> {% endcomment %}
@@ -67,17 +79,20 @@ layout: default
         <h2 class="mb-3 text-center fw-bolder">Projects</h2>
       </div>
       <div class="col-md-9 d-flex flex-column gap-2">
-        <p class="fs-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid quidem consectetur illum necessitatibus nobis magni illo officia nihil vero! Aperiam neque modi officiis quos nulla, voluptatem libero provident ut praesentium.</p>
-        {% for project in site.data.projects %}
-          <div class="d-flex flex-row justify-content-between mb-2 border border-1 rounded-3 p-3 bg-light-subtle cursor-pointer" style="border-color: #6f42c1; border-width: 1px;">
-            <div>
-              <h3>{{ project.title }}</h3>
-              <p>{{ project.description }}</p>
-            </div>
+        {% if site.data.projects.size > 0 %}
+          {% for project in site.data.projects %}
+            <div class="d-flex flex-row justify-content-between mb-2 border border-1 rounded-3 p-3 bg-light-subtle cursor-pointer" style="border-color: #6f42c1; border-width: 1px;">
+              <div>
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+              </div>
 
-            <h4>{{ project.startMonth }} {{ project.startYear }} - {{ project.endMonth }} {{ project.endYear }}</h4>
-          </div>
-        {% endfor %}
+              <h4>{{ project.startMonth }} {{ project.startYear }} - {{ project.endMonth }} {{ project.endYear }}</h4>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p class="fs-5">No Projects</p>
+        {% endif %}
       </div>
     </div>
     {% comment %} <hr/> {% endcomment %}
@@ -86,7 +101,18 @@ layout: default
       <div class="col-md-3">
         <h2 class="mb-3 text-center fw-bolder">Blog</h2>
       </div>
-      <div class="col-md-9"></div>
+      <div class="col-md-9">
+        {% if site.posts.size > 0 %}
+          {% for post in site.posts %}
+            <div class="d-flex flex-row justify-content-between mb-2 cursor-pointer" style="border-color: #6f42c1; border-width: 1px;">
+
+              <a href="{{ post.url }}" class="post-preview">{{ post.title }}</a>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p class="fs-5">No Posts</p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>

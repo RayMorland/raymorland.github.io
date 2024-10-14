@@ -4,9 +4,13 @@ title: About
 permalink: /about/
 ---
 
-  <h1>About</h1>
+  <div class="container d-flex flex-column gap-4">
+  <h1 class="fw-bold">About</h1>
   <div class="row mb-2">
+  <div class="col-md-3">
     <h2 class="mb-3">Employment</h2>
+    </div>
+    <div class="col-md-9">
     {% for job in site.data.employment %}
       <div class="d-flex flex-row justify-content-between mb-2">
         <div>
@@ -25,7 +29,7 @@ permalink: /about/
         <h4>{{ job.startMonth }} {{ job.startYear }} - {{ job.endMonth }} {{ job.endYear }}</h4>
       </div>
     {% endfor %}
-
+</div>
   </div>
 
   <div class="row mb-2">
@@ -52,5 +56,5 @@ permalink: /about/
         </div>
       {% endfor %}
     </div>
-
+</div>
   </div>

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Blog
-permalink: /blog
+title: Research
+permalink: /research/
 ---
 
 <div class="container d-flex flex-column gap-4">
-    <h1 class="fw-bold">Blog</h1>
+    <h1 class="fw-bold">Research</h1>
     <div class="row mb-2">
         <div class="col-md-3">
             <h2 class="mb-3">Coming Soon</h2>
@@ -14,8 +14,3 @@ permalink: /blog
         </div>
     </div>
 </div>
-<!-- <ul>
-  {% for post in site.posts %}
-  <li><a href="{{ post.url }}" class="post-preview">{{ post.title }}</a></li>
-  {% endfor %}
-</ul> -->
