@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "title": "QuizMaster: An Adaptive Formative Assessment System",
+    "description": "",
+    "abstract": "In this paper, we introduce QuizMaster, an innovative web-based adaptive learning system designed for conducting formative assessment on-demand anytime during students’ course study. QuizMaster reduces learner time spent on assessment and accelerates formative feedback delivery. Leveraging a Multi-Armed Bandit algorithm for question sequencing and feedback, it ensures intelligent assessment processes. Additionally, we employ Large Language Models to auto-generate questions, enhancing instructor productivity. When deployed, QuizMaster will serve to assess adaptive algorithms for formative assessment in real-world learning scenarios. Through our detailed analysis of the QuizMaster architecture, we demonstrate how to leverage reinforcement learning and generative intelligence in the development of systems for formative assessment.",
+    "published": "June 1, 2024",
+    "authors": ["R. Morland", "F. Lin", "H. Yan"],
+    "doi": "https://doi.org/10.1007/978-3-031-63028-6_5",
+    "slug": ""
+  },
+  {
+    "title": "Fast Weakness identification for adaptive feedback",
+    "description": "",
+    "abstract": "Identifying and addressing areas of weakness of online learning students early on is critically important to prevent minor issues from becoming major obstacles to their success. It is desirable to have a tool that allows learners to conduct personalized formative assessment on demand anytime during their course study. To minimize the cognitive load of a learner and facilitate the iterative learning process, a pedagogical strategy is to identify a singular weak skill each formative assessment and to provide adaptive feedback for remediation for the learner to close the gap between his/her current performance and the expected mastery criteria. As one gap closes, another gap may be identified afterward, renewing the formative assessment and feedback loop. For such singular weakness identification, minimizing the time spent or the number of questions on each assessment is crucial for maintaining learner engagement. On the other hand, it is also critical to ensure that the result of the assessment is reliable to provide effective feedback. To balance the accuracy and efficiency of the assessment, we propose three algorithms for fast and adaptive weakness identification based on the good arm identification (GAI) problem in multi-armed bandit-based machine learning. We evaluate the sensitivity and performance of the proposed algorithms through simulation.",
+    "published": "June 1, 2024",
+    "authors": ["R. Morland", "L. Wang", "F. Lin"],
+    "doi": "https://doi.org/10.1007/978-3-031-63028-6_4",
+    "slug": ""
+  }
+]

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Research
+permalink: /research/
+---
+
+<div class="container d-flex flex-column gap-4">
+  <h1 class="fw-bold">Research</h1>
+  <p class="fs-5" style="max-width: 900px">My research interests are primarily in the field of Artificial Intelligence and Machine Learning. My current focus is on the implementation of AI for education and human-AI interaction.</p>
+  <div class="row mb-2">
+    <div class="col-12">
+      {% if site.data.research.size > 0 %}
+        {% for research in site.data.research %}
+
+          <div class="d-flex flex-column justify-content-between mb-4 border border-1 rounded-3 p-3 cursor-pointer" style="border-color: #6f42c1; border-width: 1px;">
+            <div>
+              <h3>{{ research.title }}</h3>
+              <h4>{{ research.published }} |
+                {% for author in research.authors %}
+                  {{ author }}
+                {% endfor %}
+              </h4>
+              <p>{{ research.abstract }}</p>
+            </div>
+
+
+            <a href={{research.doi}}>View Research</a>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="fs-5">No Research</p>
+      {% endif %}
+    </div>
+  </div>
+</div>

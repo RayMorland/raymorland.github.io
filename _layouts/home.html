@@ -17,12 +17,17 @@ layout: default
         </h3>
         <h4 class="">
           MSc Information Systems Student & Research Assistant @
-          <a
-            href="https://www.athabascau.ca/science-and-technology/about/discover-our-academic-disciplines/school-of-computing-and-information-systems.html"
-            target="_blank"
-            rel="noopener noreferrer">Athabasca University</a>
+          <a href="https://oscar.athabascau.ca/ies/index.html" rel="noopener noreferrer">Athabasca University</a>
         </h4>
-        <a href="mailto:raymondmorland@proton.me" class="text-wrap">raymondmorland@proton.me</a>
+        <h4 class="">
+          Web Developer @
+          <a href="#" rel="noopener noreferrer">Mordev Studio</a>
+        </h4>
+        <h4 class="">
+          Team Captain @
+          <a href="#" rel="noopener noreferrer">AUAAS</a>
+        </h4>
+        <a href="mailto:raymond@mordev.studio" class="text-wrap">raymond@mordev.studio</a>
         <div class="d-flex flex-row justify-content-center gap-1">
           <div class="p-2  d-flex flex-column justify-content-center">
             <a
@@ -70,10 +75,30 @@ layout: default
         <h2 class="mb-3 text-center fw-bolder">Research</h2>
       </div>
       <div class="col-md-9">
-        <p class="fs-5">Currently, my research focuses on the application of AI in Educational technologies.</p>
+        {% if site.data.research.size > 0 %}
+          {% for research in site.data.research %}
+
+            <div class="d-flex flex-column justify-content-between mb-4 border border-1 rounded-3 p-3 cursor-pointer" style="border-color: #6f42c1; border-width: 1px;">
+              <div>
+                <h3>{{ research.title }}</h3>
+                <h4>{{ research.published }} |
+                  {% for author in research.authors %}
+                    {{ author }}
+                  {% endfor %}
+                </h4>
+                <p>{{ research.abstract }}</p>
+              </div>
+
+
+              <a href={{research.doi}}>View Research</a>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p class="fs-5">No Research</p>
+        {% endif %}
       </div>
     </div>
-    {% comment %} <hr> {% endcomment %}
+    <hr>
     <div class="row mb-2">
       <div class="col-md-3">
         <h2 class="mb-3 text-center fw-bolder">Projects</h2>
@@ -95,7 +120,7 @@ layout: default
         {% endif %}
       </div>
     </div>
-    {% comment %} <hr/> {% endcomment %}
+    <hr/>
     <div class="row mb-2">
 
       <div class="col-md-3">

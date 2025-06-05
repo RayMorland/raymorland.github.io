@@ -1,0 +1,51 @@
+---
+layout: default
+title: Photos
+permalink: /photos
+---
+
+<div class="container d-flex flex-column gap-4">
+  <h1 class="fw-bold">Photos</h1>
+  <p class="fs-5" style="max-width: 900px">
+    Sometimes I travel, I usually take pictures. Please use these as you see fit, my only wish is that they help you see the world through a different lens.
+  </p>
+  <div class="row mb-2 g-4">
+    {% if site.data.photos.size > 0 %}
+      <div class="col-md-6">
+        {% for photo in site.data.photos %}
+          {% assign index = forloop.index0 | modulo: 2 %}
+          {% if index == 0 %}
+            <div class="mb-4">
+              <img
+                src="{{ photo.path }}"
+                alt=""
+                width="100%" />
+              <h4 class="fw-normal">{{ photo.location }}</h4>
+            </div>
+          {% endif %}
+
+        {% endfor %}
+      </div>
+      <div class="col-md-6">
+        {% for photo in site.data.photos %}
+          {% assign index = forloop.index0 | modulo: 2 %}
+          {% if index == 1 %}
+            <div class="mb-4">
+              <img
+                src="{{ photo.path }}"
+                alt=""
+                width="100%" />
+              <h4 class="fw-normal">{{ photo.location }}</h4>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="fs-5">No Photos</p>
+    {% endif %}
+  </div>
+  <p class="fs-5">
+    View and download these and other photos on
+    <a href="https://unsplash.com/@raymorland">unsplash</a>
+  </p>
+</div>

@@ -1,0 +1,32 @@
+[
+  {
+    "link": "https://python.org",
+    "name": "Python",
+    "details": ""
+  },
+  {
+    "link": "https://pytorch.org",
+    "name": "PyTorch",
+    "details": ""
+  },
+  {
+    "link": "https://react.dev",
+    "name": "React",
+    "details": ""
+  },
+  {
+    "link": "https://nextjs.org",
+    "name": "Next.js",
+    "details": ""
+  },
+  {
+    "link": "https://wordpress.com",
+    "name": "Wordpress",
+    "details": ""
+  },
+  {
+    "link": "https://aws.com",
+    "name": "AWS",
+    "details": ""
+  }
+]
